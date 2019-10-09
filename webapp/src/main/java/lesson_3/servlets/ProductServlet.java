@@ -1,4 +1,4 @@
-package lesson_2.servlets;
+package lesson_3.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +11,8 @@ import java.io.IOException;
 public class ProductServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().println("<h1>Products</h1>");
+//        resp.getWriter().println("<h1>Products</h1>");
+        req.getRequestDispatcher("lesson_3/product.jsp").forward(req, resp);
+
     }
 }

@@ -1,4 +1,4 @@
-package lesson_2.servlets;
+package lesson_3.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,7 +14,8 @@ public class MainServlet extends HttpServlet {
         resp.getWriter().println("<h1>the main cervelat lives here</h1>");
         resp.getWriter().println("<a href=/webapp/cart>Cart</a> ");
         resp.getWriter().println("<a href=/webapp/order>Order</a>");
-        resp.getWriter().println("<a href=/webapp/catalog>Catalog</a>");
+//        resp.getWriter().println("<a href=/webapp/catalog>Catalog</a>");
         resp.getWriter().println("<a href=/webapp/product>Product</a>");
+        resp.getWriter().println("<a href=/webapp/company>About company</a>");
     }
 }
