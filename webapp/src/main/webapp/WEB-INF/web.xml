@@ -26,14 +26,32 @@
 <!--            st=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;useUnicode=true&-->
 <!--            amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</param-value>-->
 <!--    </context-param>-->
-    
+
 <!--    <context-param>-->
 <!--        <param-name>username</param-name>-->
 <!--        <param-value>root</param-value>-->
 <!--    </context-param>-->
-    
+
 <!--    <context-param>-->
 <!--        <param-name>password</param-name>-->
 <!--        <param-value>root</param-value>-->
 <!--    </context-param>-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>400</error-code>
+        <location>/WEB-INF/error.jsp</location>
+    </error-page>
+
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/error.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/error.jsp</location>
+    </error-page>
 </web-app>
