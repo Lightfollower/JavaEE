@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/toDo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/src/main/java/toDo/controller/ToDoServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/src/main/java/toDo/listener/ContextListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/src/main/java/toDo/persist/ToDoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/toDo/src/main/java/toDo/persist/ToDoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/toDo/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/lesson_3/servlets/AboutCompanyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/lesson_3/servlets/AboutCompanyServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/ru/geekbrains/servlet/FirstHTTPServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/ru/geekbrains/servlet/FirstHTTPServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp/WEB-INF/classes/ru/geekbrains/servlet/FirstHTTPServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp/WEB-INF/classes/ru/geekbrains/servlet/FirstHTTPServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toDo/src/main/java/toDo/controller/TodoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/toDo/src/main/java/toDo/controller/TodoBean.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +145,7 @@
       <workItem from="1571234042411" duration="472000" />
       <workItem from="1571562102930" duration="2220000" />
       <workItem from="1571725101727" duration="15105000" />
-      <workItem from="1571810458111" duration="13517000" />
+      <workItem from="1571810458111" duration="14496000" />
     </task>
     <servers />
   </component>

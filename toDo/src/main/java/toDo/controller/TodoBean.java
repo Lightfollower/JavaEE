@@ -37,7 +37,7 @@ public class TodoBean implements Serializable {
 
     public String createTodo() {
         this.toDo = new ToDo();
-        return "/todo.xhtml?faces-redirect=true";
+        return "/toDo.xhtml?faces-redirect=true";
     }
 
     public String saveTodo() throws SQLException {
@@ -56,6 +56,11 @@ public class TodoBean implements Serializable {
 
     public String editTodo(ToDo toDo) {
         this.toDo = toDo;
-        return "/todo.xhtml?faces-redirect=true";
+        System.out.println();
+        System.out.println();
+        System.out.println("Redirected");
+        System.out.println();
+        System.out.println();
+        return "/toDo.xhtml?facses-redirect=true";
     }
 }
