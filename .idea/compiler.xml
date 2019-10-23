@@ -7,7 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="webapp" />
+        <module name="toDo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="9" />
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_STRING" value="--add-modules java.xml.ws.annotation" />
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="toDo" options="" />
+      <module name="webapp" options="" />
+    </option>
   </component>
 </project>
