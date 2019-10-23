@@ -26,11 +26,6 @@ public class ToDoServlet extends HttpServlet {
     @Override
     public void init() throws ServletException {
         this.repository = (ToDoRepository) getServletContext().getAttribute("toDoRepo");
-        System.out.println();
-        System.out.println();
-        System.out.println("Repka: " + getServletContext().getAttribute("toDoRepo"));
-        System.out.println();
-        System.out.println();
         if (this.repository == null) {
             throw new ServletException("TodoRepository is not initialized");
         }
@@ -80,11 +75,6 @@ public class ToDoServlet extends HttpServlet {
         try {
 
             req.setAttribute("todos", repository.findAll());
-            System.out.println();
-            System.out.println();
-            System.out.println("finding");
-            System.out.println();
-            System.out.println();
         } catch (SQLException ex) {
             logger.error("", ex);
             resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
@@ -133,7 +123,7 @@ public class ToDoServlet extends HttpServlet {
         }
         try {
             repository.delete(id);
-            resp.sendRedirect(getServletContext().getContextPath() + "/");
+            resp.sendRedirect(getServletContext().getContextPath());
         } catch (SQLException ex) {
             logger.error("", ex);
             resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

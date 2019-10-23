@@ -40,11 +40,6 @@ public class ToDoRepository {
             stmt.setLong(1, id);
 
             stmt.execute();
-            System.out.println();
-            System.out.println();
-            System.out.println("deleted");
-            System.out.println();
-            System.out.println();
         }
     }
 
