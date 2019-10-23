@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/toDo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/src/main/java/toDo/controller/ToDoServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/src/main/java/toDo/listener/ContextListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/src/main/java/toDo/persist/ToDoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/toDo/src/main/java/toDo/persist/ToDoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/toDo/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/toDo/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/main/java/lesson_3/servlets/AboutCompanyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/main/java/lesson_3/servlets/AboutCompanyServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/classes/ru/geekbrains/servlet/FirstHTTPServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/classes/ru/geekbrains/servlet/FirstHTTPServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp.war" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp/WEB-INF/classes/ru/geekbrains/servlet/FirstHTTPServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp/WEB-INF/classes/ru/geekbrains/servlet/FirstHTTPServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/target/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/target/webapp/WEB-INF/web.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +12,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="XHTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -51,21 +33,22 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaAlgorithms" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IdeaProjects/14072019" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39770114" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\JavaEE\webapp\src\main\webapp\WEB-INF" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\JavaEE\toDo\src\main\webapp\WEB-INF" />
       <recent name="F:\JavaEE\toDo\src\main\webapp" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\JavaEE\webapp\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -80,7 +63,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.toDo [clean,install,wildfly:deploy]">
+  <component name="RunManager" selected="Maven.Lesson_4">
+    <configuration name="Lesson_4" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="wildfly:deploy" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/lesson_4" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="toDo [clean,install,wildfly:deploy]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -138,6 +148,7 @@
     <list>
       <item itemvalue="Maven.webapp [clean,install,wildfly:deploy]" />
       <item itemvalue="Maven.toDo [clean,install,wildfly:deploy]" />
+      <item itemvalue="Maven.Lesson_4" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -160,7 +171,14 @@
       <workItem from="1571234042411" duration="472000" />
       <workItem from="1571562102930" duration="2220000" />
       <workItem from="1571725101727" duration="15105000" />
-      <workItem from="1571810458111" duration="13517000" />
+      <workItem from="1571810458111" duration="14496000" />
+      <workItem from="1572948950417" duration="5403000" />
+      <workItem from="1573031640212" duration="10054000" />
+      <workItem from="1573129123398" duration="84000" />
+      <workItem from="1573140990694" duration="4580000" />
+      <workItem from="1573199210983" duration="23000" />
+      <workItem from="1573373786449" duration="922000" />
+      <workItem from="1573401292312" duration="5040000" />
     </task>
     <servers />
   </component>
