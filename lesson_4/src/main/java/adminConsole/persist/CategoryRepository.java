@@ -23,9 +23,6 @@ public class CategoryRepository {
     @Inject
     private ServletContext servletContext;
 
-    @Inject
-    private DataSource dataSource;
-
     private Connection conn;
 
 
@@ -45,7 +42,7 @@ public class CategoryRepository {
 
     public void insert(Category category) throws SQLException {
         try (PreparedStatement stmt = conn.prepareStatement(
-                "insert into categories(name) values (?, ?);")) {
+                "INSERT INTO categories (catName) VALUES (?);")) {
             stmt.setString(1, category.getName());
             stmt.execute();
         }
@@ -53,16 +50,16 @@ public class CategoryRepository {
 
     public void update(Category category) throws SQLException {
         try (PreparedStatement stmt = conn.prepareStatement(
-                "update categories set catName = ? where id = ?;")) {
+                "UPDATE categories SET catName = ? WHERE idcategory = ?")) {
             stmt.setString(1, category.getName());
-            stmt.setLong(3, category.getId());
+            stmt.setLong(2, category.getId());
             stmt.execute();
         }
     }
 
     public void delete(long id) throws SQLException {
         try (PreparedStatement stmt = conn.prepareStatement(
-                "delete from categories where id = ?;")) {
+                "delete from categories where idcategory = ?;")) {
             stmt.setLong(1, id);
             stmt.execute();
         }
@@ -70,7 +67,7 @@ public class CategoryRepository {
 
     public Category findById(long id) throws SQLException {
         try (PreparedStatement stmt = conn.prepareStatement(
-                "select id, catName from todos where id = ?")) {
+                "SELECT * FROM categories Where idcategory = ?")) {
             stmt.setLong(1, id);
             ResultSet rs = stmt.executeQuery();
 
@@ -84,7 +81,7 @@ public class CategoryRepository {
     public List<Category> findAll() throws SQLException {
         List<Category> res = new ArrayList<>();
         try (Statement stmt = conn.createStatement()) {
-            ResultSet rs = stmt.executeQuery("select id, catName from categories");
+            ResultSet rs = stmt.executeQuery("SELECT * FROM categories;");
 
             while (rs.next()) {
                 res.add(new Category(rs.getLong(1), rs.getString(2)));
@@ -95,9 +92,12 @@ public class CategoryRepository {
 
     private void createTableIfNotExists(Connection conn) throws SQLException {
         try (Statement stmt = conn.createStatement()) {
-            stmt.execute("create table if not exists categories (\n" +
-                    "\tid int auto_increment primary key,\n" +
-                    "    description varchar(25),\n" + ");");
+            stmt.execute("CREATE TABLE `categories` (\n" +
+                    "  `idcategories` int(11) NOT NULL AUTO_INCREMENT,\n" +
+                    "  `catName` varchar(45) NOT NULL,\n" +
+                    "  PRIMARY KEY (`idcategories`),\n" +
+                    "  UNIQUE KEY `idcategories_UNIQUE` (`idcategories`)\n" +
+                    ") ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci");
         }
     }
 }

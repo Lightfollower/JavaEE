@@ -1,8 +1,8 @@
 package adminConsole.persist;
 
 public class Category {
-    private Long id;
 
+    private Long id;
     private String name;
 
 
@@ -12,6 +12,7 @@ public class Category {
     public Category(Long id, String name) {
         this.id = id;
         this.name = name;
+
     }
 
     public Long getId() {

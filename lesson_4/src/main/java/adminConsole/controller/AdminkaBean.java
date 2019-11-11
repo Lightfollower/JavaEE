@@ -28,6 +28,10 @@ public class AdminkaBean implements Serializable {
 
     private Category category;
     private Product product;
+    private Order order;
+
+    public AdminkaBean() {
+    }
 
     public Category getCategory() {
         return category;
@@ -35,6 +39,10 @@ public class AdminkaBean implements Serializable {
 
     public Product getProduct() {
         return product;
+    }
+
+    public Order getOrder() {
+        return order;
     }
 
     public void setCategory(Category category) {
@@ -45,15 +53,20 @@ public class AdminkaBean implements Serializable {
         this.product = product;
     }
 
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
     public List<Category> getAllCategories() throws SQLException {
-//        List<Category> categories = new ArrayList<>();
-//        categories.add(new Category());
-//        return categories;
         return categoryRepository.findAll();
     }
 
     public List<Product> getAllProducts() throws SQLException {
         return productRepository.findAll();
+    }
+
+    public List<Order> getAllOrders() throws SQLException {
+        return orderRepository.findAll();
     }
 
     public String createCategory() {
@@ -72,7 +85,7 @@ public class AdminkaBean implements Serializable {
         } else {
             categoryRepository.update(category);
         }
-        return "/index.xhtml?faces-redirect=true";
+        return "/categories.xhtml?faces-redirect=true";
     }
 
     public String saveProduct() throws SQLException {
@@ -81,7 +94,7 @@ public class AdminkaBean implements Serializable {
         } else {
             productRepository.update(product);
         }
-        return "/index.xhtml?faces-redirect=true";
+        return "/products.xhtml?faces-redirect=true";
     }
 
     public void deleteCategory(Category category) throws SQLException {
@@ -104,16 +117,25 @@ public class AdminkaBean implements Serializable {
         return "/product.xhtml?faces-redirect=true";
     }
 
-    public String goToProducts() {
-        return "products.xhtml?faces-redirect=true";
+    public String editOrder(Order order) {
+        this.order = order;
+        return "/product.xhtml?faces-redirect=true";
     }
 
-    public String goToCategoryes() {
-        return "categories.xhtml?faces-redirect=true";
+    public String goToProducts() {
+        return "/products.xhtml?faces-redirect=true";
+    }
+
+    public String goToCategories() {
+        return "/categories.xhtml?faces-redirect=true";
     }
 
     public String goToOrders() {
-        return "orders.xhtml?faces-redirect=true";
+        return "/orders.xhtml?faces-redirect=true";
+    }
+
+    public String goToRoot() {
+        return "/adminka.xhtml?faces-redirect=true";
     }
 
 }
