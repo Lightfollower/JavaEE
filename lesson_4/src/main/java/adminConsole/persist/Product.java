@@ -1,26 +1,16 @@
 package adminConsole.persist;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "products")
 public class Product {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(length = 4096)
     private String name;
-
-    @ManyToOne()
 
     private Category category;
 
     public Product() {
     }
 
-    public Product(Long id, String name, String categoryName) {
+    public Product(Long id, String name) {
         this.id = id;
         this.name = name;
     }

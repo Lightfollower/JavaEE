@@ -9,6 +9,8 @@ import javax.faces.event.ComponentSystemEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 @SessionScoped
@@ -19,33 +21,13 @@ public class AdminkaBean implements Serializable {
 
     @Inject
     private CategoryRepository categoryRepository;
-
     @Inject
     private ProductRepository productRepository;
-
     @Inject
     private OrderRepository orderRepository;
 
     private Category category;
     private Product product;
-    private Order order;
-
-    private List<Category> categoriesList;
-    private List<Product> productList;
-    private List<Order> orderList;
-
-    public void preloadOrdersList(ComponentSystemEvent componentSystemEvent) {
-        this.orderList = orderRepository.findAll();
-
-    }
-
-    public void preloadCategoryList(ComponentSystemEvent componentSystemEvent) {
-        this.categoriesList = categoryRepository.findAll();
-    }
-
-    public void preloadProductList(ComponentSystemEvent componentSystemEvent) {
-        this.productList = productRepository.findAll();
-    }
 
     public Category getCategory() {
         return category;
@@ -63,16 +45,15 @@ public class AdminkaBean implements Serializable {
         this.product = product;
     }
 
-    public List<Category> getAllCategories() {
-        return categoriesList;
+    public List<Category> getAllCategories() throws SQLException {
+//        List<Category> categories = new ArrayList<>();
+//        categories.add(new Category());
+//        return categories;
+        return categoryRepository.findAll();
     }
 
-    public List<Product> getAllProducts() {
-        return productList;
-    }
-
-    public List<Order> getAllOrders() {
-        return orderList;
+    public List<Product> getAllProducts() throws SQLException {
+        return productRepository.findAll();
     }
 
     public String createCategory() {
@@ -85,33 +66,31 @@ public class AdminkaBean implements Serializable {
         return "/product.xhtml?faces-redirect=true";
     }
 
-    public String saveCategory() {
+    public String saveCategory() throws SQLException {
         if (category.getId() == null) {
             categoryRepository.insert(category);
         } else {
             categoryRepository.update(category);
         }
-        return "/adminka.xhtml?faces-redirect=true";
+        return "/index.xhtml?faces-redirect=true";
     }
 
-    public String saveProduct() {
+    public String saveProduct() throws SQLException {
         if (product.getId() == null) {
-            product.setCategory(categoryRepository.findByName(category.getName()));
             productRepository.insert(product);
         } else {
-            product.setCategory(category);
             productRepository.update(product);
         }
-        return "/adminka.xhtml?faces-redirect=true";
+        return "/index.xhtml?faces-redirect=true";
     }
 
-    public void deleteCategory(Category category) {
-        logger.info("Deleting cat.");
+    public void deleteCategory(Category category) throws SQLException {
+        logger.info("Deleting Category.");
         categoryRepository.delete(category.getId());
     }
 
-    public void deleteProduct(Product product) {
-        logger.info("Deleting prod.");
+    public void deleteProduct(Product product) throws SQLException {
+        logger.info("Deleting Product.");
         productRepository.delete(product.getId());
     }
 
@@ -125,15 +104,16 @@ public class AdminkaBean implements Serializable {
         return "/product.xhtml?faces-redirect=true";
     }
 
-    public String goToProducts(){
+    public String goToProducts() {
         return "products.xhtml?faces-redirect=true";
     }
 
-    public String goToCategoryes(){
+    public String goToCategoryes() {
         return "categories.xhtml?faces-redirect=true";
     }
 
-    public String goToOrders(){
+    public String goToOrders() {
         return "orders.xhtml?faces-redirect=true";
     }
+
 }

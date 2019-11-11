@@ -1,21 +1,10 @@
 package adminConsole.persist;
 
-import javax.persistence.*;
-
-@Entity
-@Table(name = "orders")
 public class Order {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 4096)
     private String name;
-
-//    @ManyToOne()
-
-//    private Category category;
 
     public Order() {
     }

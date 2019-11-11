@@ -17,25 +17,20 @@ public class OrderRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(OrderRepository.class);
 
-    @PersistenceContext(unitName = "ds")
     private EntityManager em;
 
-    @Transactional
     @PostConstruct
     public void init() {
     }
 
-    @Transactional
     public void insert(Order order) {
         em.persist(order);
     }
 
-    @Transactional
     public void update(Order order) {
         em.merge(order);
     }
 
-    @Transactional
     public void delete(long id) {
         Order order = em.find(Order.class, id);
         if (order != null) {
@@ -43,12 +38,10 @@ public class OrderRepository {
         }
     }
 
-    @Transactional
     public Order findById(long id) {
         return em.find(Order.class, id);
     }
 
-    @Transactional
     public List<Order> findAll() {
         System.out.println();
         System.out.println();

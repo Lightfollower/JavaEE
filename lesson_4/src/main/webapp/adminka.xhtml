@@ -17,9 +17,6 @@
 
 <h:body>
 
-    <f:event listener="${adminkaBean.preloadCategoryList}" type="preRenderView"/>
-    <f:event listener="${adminkaBean.preloadProductList}" type="preRenderView"/>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Ololo</a>
 
@@ -56,65 +53,8 @@
                 </div>
 
 
-                <div class="col-12">
-                    <h:dataTable value="#{adminkaBean.allProducts}" var="prod"
-                                 styleClass="table table-bordered my-2">
-
-                        <h:column>
-                            <f:facet name="header">Id</f:facet>
-                            #{prod.id}
-                        </h:column>
-
-                        <h:column>
-                            <f:facet name="header">Name</f:facet>
-                            #{prod.name}
-                        </h:column>
-                        <h:column>
-                            <f:facet name="header">Category</f:facet>
-                            #{prod.category}
-                        </h:column>
 
 
-                        <h:column>
-                            <f:facet name="header">Actions</f:facet>
-                            <h:commandButton value="Edit" styleClass="btn btn-success"
-                                             action="#{adminkaBean.editProduct(prod)}"/>
-                            <h:commandButton value="Delete" styleClass="btn btn-danger"
-                                             action="#{adminkaBean.deleteProduct(prod)}">
-                                <f:ajax event="click" render="catForm"/>
-                            </h:commandButton>
-                        </h:column>
-
-                    </h:dataTable>
-                </div>
-
-                <div class="col-12">
-                    <h:dataTable value="#{adminkaBean.allCategories}" var="cat"
-                                 styleClass="table table-bordered my-2">
-
-                        <h:column>
-                            <f:facet name="header">Id</f:facet>
-                            #{cat.id}
-                        </h:column>
-
-                        <h:column>
-                            <f:facet name="header">Name</f:facet>
-                            #{cat.name}
-                        </h:column>
-
-
-                        <h:column>
-                            <f:facet name="header">Actions</f:facet>
-                            <h:commandButton value="Edit" styleClass="btn btn-success"
-                                             action="#{adminkaBean.editCategory(cat)}"/>
-                            <h:commandButton value="Delete" styleClass="btn btn-danger"
-                                             action="#{adminkaBean.deleteCategory(cat)}">
-                                <f:ajax event="click" render="catForm"/>
-                            </h:commandButton>
-                        </h:column>
-
-                    </h:dataTable>
-                </div>
             </div>
         </h:form>
     </div>
