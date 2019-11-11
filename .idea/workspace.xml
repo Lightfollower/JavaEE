@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/lesson_4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/lesson_4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/resources/META-INF/persistence.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/adminka.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/adminka.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/categories.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/categories.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/category.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/category.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/order.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/order.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/orders.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/orders.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/product.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/product.xhtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,15 +53,15 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\JavaEE\webapp\src\main\webapp\WEB-INF" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JavaEE\toDo\src\main\webapp\WEB-INF" />
+      <recent name="F:\JavaEE\toDo\src\main\webapp" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="adminConsole.persist" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\JavaEE\toDo\src\main\webapp\WEB-INF" />
-      <recent name="F:\JavaEE\toDo\src\main\webapp" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\JavaEE\webapp\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -192,6 +193,8 @@
       <workItem from="1573373786449" duration="922000" />
       <workItem from="1573401292312" duration="5203000" />
       <workItem from="1573457134602" duration="6320000" />
+      <workItem from="1573493031776" duration="10438000" />
+      <workItem from="1573529130910" duration="5202000" />
     </task>
     <servers />
   </component>

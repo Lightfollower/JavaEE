@@ -69,6 +69,10 @@ public class AdminkaBean implements Serializable {
         return orderRepository.findAll();
     }
 
+    public List<String> loadOrder(String clientName) throws SQLException {
+        return orderRepository.findProductListForOrderForm(clientName);
+    }
+
     public String createCategory() {
         this.category = new Category();
         return "/category.xhtml?faces-redirect=true";
@@ -97,6 +101,13 @@ public class AdminkaBean implements Serializable {
         return "/products.xhtml?faces-redirect=true";
     }
 
+   public String saveOrder() throws SQLException {
+
+            orderRepository.update(order);
+
+        return "/orders.xhtml?faces-redirect=true";
+    }
+
     public void deleteCategory(Category category) throws SQLException {
         logger.info("Deleting Category.");
         categoryRepository.delete(category.getId());
@@ -119,7 +130,7 @@ public class AdminkaBean implements Serializable {
 
     public String editOrder(Order order) {
         this.order = order;
-        return "/product.xhtml?faces-redirect=true";
+        return "/order.xhtml?faces-redirect=true";
     }
 
     public String goToProducts() {

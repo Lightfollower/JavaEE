@@ -6,10 +6,12 @@ public class Order {
 
     private String name;
 
+
+
     public Order() {
     }
 
-    public Order(Long id, String name, String orderName) {
+    public Order(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -29,9 +31,4 @@ public class Order {
     public void setName(String name) {
         this.name = name;
     }
-
-    public Order getOrder() {
-        return getOrder();
-    }
-
 }
