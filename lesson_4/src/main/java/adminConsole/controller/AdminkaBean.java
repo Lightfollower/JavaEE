@@ -28,14 +28,15 @@ public class AdminkaBean implements Serializable {
 
     private Category category;
     private Product product;
-    private Order order;
+    private Orders orders;
 
     private List<Category> categoriesList;
     private List<Product> productList;
-    private List<Order> orderList;
+    private List<Orders> ordersList;
+    private List<Cart> productListForCart;
 
     public void preloadOrdersList(ComponentSystemEvent componentSystemEvent) {
-        this.orderList = orderRepository.findAll();
+        this.ordersList = orderRepository.findAll();
 
     }
 
@@ -45,6 +46,13 @@ public class AdminkaBean implements Serializable {
 
     public void preloadProductList(ComponentSystemEvent componentSystemEvent) {
         this.productList = productRepository.findAll();
+    }
+
+    public void loadProductListForCart(ComponentSystemEvent componentSystemEvent){
+        System.out.println(orderRepository.findByOrderId(orders.getId()));
+
+        this.productListForCart = orderRepository.findByOrderId(orders.getId());
+
     }
 
     public Category getCategory() {
@@ -71,8 +79,8 @@ public class AdminkaBean implements Serializable {
         return productList;
     }
 
-    public List<Order> getAllOrders() {
-        return orderList;
+    public List<Orders> getAllOrders() {
+        return ordersList;
     }
 
     public String createCategory() {
@@ -125,15 +133,24 @@ public class AdminkaBean implements Serializable {
         return "/product.xhtml?faces-redirect=true";
     }
 
+    public String editOrder(Orders orders) {
+        this.orders = orders;
+        return "/order.xhtml?faces-redirect=true";
+    }
+
     public String goToProducts(){
         return "products.xhtml?faces-redirect=true";
     }
 
-    public String goToCategoryes(){
+    public String goToCategories(){
         return "categories.xhtml?faces-redirect=true";
     }
 
     public String goToOrders(){
         return "orders.xhtml?faces-redirect=true";
+    }
+
+    public String goToRoot(){
+        return "adminka.xhtml?faces-redirect=true";
     }
 }

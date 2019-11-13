@@ -3,24 +3,20 @@ package adminConsole.persist;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "orders")
-public class Order {
+@Table(name = "clients")
+public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 4096)
+    @Column(length = 4096, unique = true)
     private String name;
 
-//    @ManyToOne()
-
-//    private Category category;
-
-    public Order() {
+    public Client() {
     }
 
-    public Order(Long id, String name, String orderName) {
+    public Client(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -41,8 +37,5 @@ public class Order {
         this.name = name;
     }
 
-    public Order getOrder() {
-        return getOrder();
-    }
 
 }

@@ -3,18 +3,18 @@ package adminConsole.persist;
 import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "todos")
+//@Entity
+//@Table(name = "todos")
 public class ToDo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 4096)
+//    @Column(length = 4096)
     private String description;
 
-    @Column
+//    @Column
     private LocalDate targetDate;
 
     public ToDo() {

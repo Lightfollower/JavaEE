@@ -12,17 +12,17 @@ import javax.transaction.Transactional;
 import java.time.LocalDate;
 import java.util.List;
 
-@ApplicationScoped
-@Named
+//@ApplicationScoped
+//@Named
 public class ToDoRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(ToDoRepository.class);
 
-    @PersistenceContext(unitName = "ds")
+//    @PersistenceContext(unitName = "ds")
     private EntityManager em;
 
-    @Transactional
-    @PostConstruct
+//    @Transactional
+//    @PostConstruct
     public void init() {
         System.out.println();
         System.out.println();
@@ -52,7 +52,7 @@ public class ToDoRepository {
         }
     }
 
-    @Transactional
+//    @Transactional
     public void insert(ToDo toDo) {
         System.out.println();
         System.out.println();
@@ -67,12 +67,12 @@ public class ToDoRepository {
         System.out.println();
     }
 
-    @Transactional
+//    @Transactional
     public void update(ToDo toDo) {
         em.merge(toDo);
     }
 
-    @Transactional
+//    @Transactional
     public void delete(long id) {
         ToDo toDo = em.find(ToDo.class, id);
         if (toDo != null) {
@@ -80,12 +80,12 @@ public class ToDoRepository {
         }
     }
 
-    @Transactional
+//    @Transactional
     public ToDo findById(long id) {
         return em.find(ToDo.class, id);
     }
 
-    @Transactional
+//    @Transactional
     public List<ToDo> findAll() {
         System.out.println();
         System.out.println();

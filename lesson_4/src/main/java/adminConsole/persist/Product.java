@@ -20,7 +20,7 @@ public class Product {
     public Product() {
     }
 
-    public Product(Long id, String name, String categoryName) {
+    public Product(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -41,8 +41,8 @@ public class Product {
         this.name = name;
     }
 
-    public Category getCategory() {
-        return category;
+    public String getCategory() {
+        return category.getName();
     }
 
     public void setCategory(Category category) {

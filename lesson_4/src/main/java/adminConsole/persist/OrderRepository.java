@@ -25,36 +25,25 @@ public class OrderRepository {
     public void init() {
     }
 
+
     @Transactional
-    public void insert(Order order) {
-        em.persist(order);
+    public void update(Orders orders) {
+        em.merge(orders);
     }
 
     @Transactional
-    public void update(Order order) {
-        em.merge(order);
+    public Orders findById(long id) {
+        return em.find(Orders.class, id);
     }
 
     @Transactional
-    public void delete(long id) {
-        Order order = em.find(Order.class, id);
-        if (order != null) {
-            em.remove(order);
-        }
+    public List<Orders> findAll() {
+        return em.createQuery("from Orders", Orders.class).getResultList();
     }
 
     @Transactional
-    public Order findById(long id) {
-        return em.find(Order.class, id);
+    public List<Cart> findByOrderId(long id) {
+        return em.createQuery("select product_id FROM cart WHERE orders_id = :id").getResultList();
     }
 
-    @Transactional
-    public List<Order> findAll() {
-        System.out.println();
-        System.out.println();
-        System.out.println("ololololo");
-        System.out.println();
-        System.out.println();
-        return em.createQuery("from Order", Order.class).getResultList();
-    }
 }

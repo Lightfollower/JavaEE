@@ -52,4 +52,5 @@ public class ProductRepository {
     public List<Product> findAll() {
         return em.createQuery("from Product", Product.class).getResultList();
     }
+
 }

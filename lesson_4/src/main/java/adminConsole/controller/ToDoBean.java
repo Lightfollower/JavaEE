@@ -12,13 +12,13 @@ import javax.inject.Named;
 import java.io.Serializable;
 import java.util.List;
 
-@SessionScoped
-@Named
+//@SessionScoped
+//@Named
 public class ToDoBean implements Serializable {
 
     private static final Logger logger = LoggerFactory.getLogger(ToDoBean.class);
 
-    @Inject
+//    @Inject
     private ToDoRepository toDoRepository;
 
     private ToDo toDo;
