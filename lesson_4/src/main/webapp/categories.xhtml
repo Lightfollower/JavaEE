@@ -41,6 +41,8 @@
         <h:form id="catForm">
             <div class="row py-2">
                 <div class="col-12">
+                    <h:commandButton value="root" styleClass="btn btn-primary"
+                                     action="#{adminkaBean.goToRoot}"/>
                     <h:commandButton value="Add Category" styleClass="btn btn-primary"
                                      action="#{adminkaBean.createCategory}"/>
                 </div>

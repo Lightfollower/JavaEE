@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
-    <title>Orders list application</title>
+    <title>Categoryes</title>
 </h:head>
 
 <h:body>
@@ -41,32 +41,37 @@
         <h:form id="ordForm">
             <div class="row py-2">
                 <div class="col-12">
-                    <h:dataTable value="#{adminkaBean.allOrders}" var="order"
+                    <h:commandButton value="root" styleClass="btn btn-primary"
+                                     action="#{adminkaBean.goToRoot}"/>
+                </div>
+
+                <div class="col-12">
+                    <h:dataTable value="#{adminkaBean.allOrders}" var="ord"
                                  styleClass="table table-bordered my-2">
 
                         <h:column>
                             <f:facet name="header">Id</f:facet>
-                            #{order.id}
+                            #{ord.id}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Client name</f:facet>
+                            #{ord.client.name}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Status</f:facet>
+                            #{ord.status}
                         </h:column>
 
-                        <h:column>
-                            <f:facet name="header">Name</f:facet>
-                            #{order.name}
-                        </h:column>
 
                         <h:column>
                             <f:facet name="header">Actions</f:facet>
                             <h:commandButton value="Edit" styleClass="btn btn-success"
-                                             action="#{adminkaBean.editProduct(order)}"/>
-                            <h:commandButton value="Delete" styleClass="btn btn-danger"
-                                             action="#{adminkaBean.deleteProduct(order)}">
-                                <f:ajax event="click" render="prodForm"/>
-                            </h:commandButton>
+                                             action="#{adminkaBean.editOrder(ord)}"/>
+
                         </h:column>
 
                     </h:dataTable>
                 </div>
-
             </div>
         </h:form>
     </div>

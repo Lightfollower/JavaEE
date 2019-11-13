@@ -46,7 +46,7 @@
 
     <context-param>
         <param-name>jdbcConnectionString</param-name>
-        <param-value>jdbc:mysql://localhost:3306/adminka?createDatabaseIfNotExist=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</param-value>
+        <param-value>jdbc:mysql://localhost:3306/javaee_todo_db?createDatabaseIfNotExist=true&amp;allowPublicKeyRetrieval=true&amp;useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</param-value>
     </context-param>
 
     <context-param>
