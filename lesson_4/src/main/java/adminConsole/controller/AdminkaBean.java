@@ -9,6 +9,7 @@ import javax.faces.event.ComponentSystemEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 @SessionScoped
@@ -26,17 +27,21 @@ public class AdminkaBean implements Serializable {
     @Inject
     private OrderRepository orderRepository;
 
+    @Inject
+    private CartRepository cartRepository;
+
     private Category category;
     private Product product;
-    private Orders orders;
+    private Order order;
 
     private List<Category> categoriesList;
     private List<Product> productList;
-    private List<Orders> ordersList;
-    private List<Cart> productListForCart;
+    private List<Order> orderList;
+    private List<Cart> cart;
+    private List<Product> cartRes;
 
     public void preloadOrdersList(ComponentSystemEvent componentSystemEvent) {
-        this.ordersList = orderRepository.findAll();
+        this.orderList = orderRepository.findAll();
 
     }
 
@@ -48,11 +53,16 @@ public class AdminkaBean implements Serializable {
         this.productList = productRepository.findAll();
     }
 
-    public void loadProductListForCart(ComponentSystemEvent componentSystemEvent){
-        System.out.println(orderRepository.findByOrderId(orders.getId()));
-
-        this.productListForCart = orderRepository.findByOrderId(orders.getId());
-
+    public void preloadCart(ComponentSystemEvent componentSystemEvent) {
+        this.productList = productRepository.findAll();
+        this.cart = cartRepository.findAll();
+        this.cartRes = new ArrayList<>();
+        for (Cart c :
+                cart) {
+            if (c.getOrder().getId() == order.getId()) {
+                this.cartRes.add(c.getProduct());
+            }
+        }
     }
 
     public Category getCategory() {
@@ -71,6 +81,14 @@ public class AdminkaBean implements Serializable {
         this.product = product;
     }
 
+    public List<Product> getCartRes() {
+        return cartRes;
+    }
+
+    public void setCartRes(List<Product> cartRes) {
+        this.cartRes = cartRes;
+    }
+
     public List<Category> getAllCategories() {
         return categoriesList;
     }
@@ -79,8 +97,20 @@ public class AdminkaBean implements Serializable {
         return productList;
     }
 
-    public List<Orders> getAllOrders() {
-        return ordersList;
+    public List<Order> getAllOrders() {
+        return orderList;
+    }
+
+    public List<Cart> getCart() {
+        return cart;
+    }
+
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
     }
 
     public String createCategory() {
@@ -90,6 +120,7 @@ public class AdminkaBean implements Serializable {
 
     public String createProduct() {
         this.product = new Product();
+        this.category = new Category();
         return "/product.xhtml?faces-redirect=true";
     }
 
@@ -99,18 +130,39 @@ public class AdminkaBean implements Serializable {
         } else {
             categoryRepository.update(category);
         }
-        return "/adminka.xhtml?faces-redirect=true";
+        return "/categories.xhtml?faces-redirect=true";
     }
 
-    public String saveProduct() {
+    public String saveProduct() throws Exception {
         if (product.getId() == null) {
-            product.setCategory(categoryRepository.findByName(category.getName()));
+            for (Category c :
+                    categoriesList) {
+                if (c.getName().equals(category.getName())) {
+                    product.setCategory(c);
+                }
+            }
+            if (product.getCategory() == null)
+                throw new Exception("ololo");
             productRepository.insert(product);
         } else {
-            product.setCategory(category);
+            product.setCategory(null);
+            for (Category c:
+                    categoriesList) {
+                if(c.getName().equals(category.getName())){
+                    product.setCategory(c);
+
+                }
+            }
+            if (product.getCategory() == null)
+                throw new Exception("ololo");
             productRepository.update(product);
         }
-        return "/adminka.xhtml?faces-redirect=true";
+        return "/products.xhtml?faces-redirect=true";
+    }
+
+    public String saveOrder() {
+        orderRepository.update(order);
+        return "/orders.xhtml?faces-redirect=true";
     }
 
     public void deleteCategory(Category category) {
@@ -130,27 +182,31 @@ public class AdminkaBean implements Serializable {
 
     public String editProduct(Product product) {
         this.product = product;
+        this.category = product.getCategory();
+
         return "/product.xhtml?faces-redirect=true";
     }
 
-    public String editOrder(Orders orders) {
-        this.orders = orders;
-        return "/order.xhtml?faces-redirect=true";
+    public String editOrder(Order order) {
+        this.order = order;
+        return "/cart.xhtml?faces-redirect=true";
     }
 
-    public String goToProducts(){
+    public String goToProducts() {
         return "products.xhtml?faces-redirect=true";
     }
 
-    public String goToCategories(){
+    public String goToCategories() {
         return "categories.xhtml?faces-redirect=true";
     }
 
-    public String goToOrders(){
+    public String goToOrders() {
         return "orders.xhtml?faces-redirect=true";
     }
 
-    public String goToRoot(){
+    public String goToRoot() {
         return "adminka.xhtml?faces-redirect=true";
     }
+
+
 }

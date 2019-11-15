@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
-    <title>Adminka list application</title>
+    <title>Cart</title>
 </h:head>
 
 <h:body>
 
-    <f:event listener="${adminkaBean.loadProductListForCart}" type="preRenderView"/>
+    <f:event listener="${adminkaBean.preloadCart}" type="preRenderView"/>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Ololo</a>
@@ -38,26 +38,29 @@
 
     <div class="container">
 
-        <h:form id="Odminka">
+        <h:form id="cartForm">
             <div class="row py-2">
                 <div class="col-12">
                     <h:commandButton value="back" styleClass="btn btn-primary"
                                      action="#{adminkaBean.goToOrders}"/>
                 </div>
 
+
+                <div class="form-group">
+                    <h:outputLabel value="status"/>
+                    <h:inputText styleClass="form-control" id="name" value="#{adminkaBean.order.status}"
+                                 placeholder="Enter product name"/>
+                </div>
+                <h:commandButton value="Submit" styleClass="btn btn-primary" action="#{adminkaBean.saveOrder}"/>
+
                 <div class="col-12">
-                    <h:dataTable value="#{adminkaBean.allOrders}" var="cat"
+                    <h:dataTable value="#{adminkaBean.cartRes}" var="prods"
                                  styleClass="table table-bordered my-2">
 
                         <h:column>
                             <f:facet name="header">Id</f:facet>
+                            #{prods.name}
                         </h:column>
-
-                        <h:column>
-                            <f:facet name="header">Name</f:facet>
-                        </h:column>
-
-
                     </h:dataTable>
                 </div>
             </div>

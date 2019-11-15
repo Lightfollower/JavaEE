@@ -14,7 +14,6 @@ public class Product {
     private String name;
 
     @ManyToOne()
-
     private Category category;
 
     public Product() {
@@ -41,8 +40,8 @@ public class Product {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category.getName();
+    public Category getCategory() {
+        return category;
     }
 
     public void setCategory(Category category) {

@@ -14,16 +14,12 @@ public class Cart {
     private Product product;
 
     @ManyToOne
-    private Orders orders;
+    private Order order;
 
     @ManyToOne
     private Client client;
 
     public Cart() {
-    }
-
-    public Cart(Long id) {
-        this.id = id;
     }
 
     public Long getId() {
@@ -34,32 +30,27 @@ public class Cart {
         this.id = id;
     }
 
-    public Cart getOrder() {
-        return getOrder();
+    public Product getProduct() {
+        return product;
     }
 
+    public void setProduct(Product product) {
+        this.product = product;
+    }
 
-//    public Product getProduct() {
-//        return product;
-//    }
-//
-//    public void setProduct(Product product) {
-//        this.product = product;
-//    }
-//
-//    public Orders getOrders() {
-//        return orders;
-//    }
-//
-//    public void setOrders(Orders orders) {
-//        this.orders = orders;
-//    }
-//
-//    public Client getClient() {
-//        return client;
-//    }
-//
-//    public void setClient(Client client) {
-//        this.client = client;
-//    }
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
 }

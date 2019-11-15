@@ -8,6 +8,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -55,6 +56,8 @@ public class CategoryRepository {
 
     @Transactional
     public List<Category> findAll() {
-        return em.createQuery("from Category", Category.class).getResultList();
+        Query query = em.createNamedQuery("Category.findAll", Category.class);
+        List<Category> result = query.getResultList();
+        return result;
     }
 }

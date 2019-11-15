@@ -18,6 +18,7 @@
 <h:body>
 
     <f:event listener="${adminkaBean.preloadProductList}" type="preRenderView"/>
+    <f:event listener="${adminkaBean.preloadCategoryList}" type="preRenderView"/>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">Ololo</a>
@@ -62,7 +63,7 @@
                         </h:column>
                         <h:column>
                             <f:facet name="header">Category</f:facet>
-                            #{prod.category}
+                            #{prod.category.name}
                         </h:column>
 
 

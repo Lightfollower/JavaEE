@@ -8,14 +8,15 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
 import java.util.List;
 
 @ApplicationScoped
 @Named
-public class OrderRepository {
+public class CartRepository {
 
-    private static final Logger logger = LoggerFactory.getLogger(OrderRepository.class);
+    private static final Logger logger = LoggerFactory.getLogger(CartRepository.class);
 
     @PersistenceContext(unitName = "ds")
     private EntityManager em;
@@ -27,23 +28,17 @@ public class OrderRepository {
 
 
     @Transactional
-    public void update(Order order) {
-        em.merge(order);
+    public void update(Cart cart) {
+        em.merge(cart);
     }
 
     @Transactional
-    public Order findById(long id) {
-        return em.find(Order.class, id);
+    public Cart findById(long id) {
+        return em.find(Cart.class, id);
     }
 
     @Transactional
-    public List<Order> findAll() {
-        return em.createQuery("from Order", Order.class).getResultList();
-    }
-
-    @Transactional
-    public List<Cart> findByOrderId(long id) {
+    public List<Cart> findAll() {
         return em.createQuery("from Cart ", Cart.class).getResultList();
     }
-
 }

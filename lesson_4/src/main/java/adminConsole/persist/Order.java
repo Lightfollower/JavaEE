@@ -4,22 +4,22 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "orders")
-public class Orders {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 4096)
-    private String status;
-
     @ManyToOne()
     private Client client;
 
-    public Orders() {
+    @Column(length = 4096)
+    private String status;
+
+    public Order() {
     }
 
-    public Orders(Long id) {
+    public Order(Long id) {
         this.id = id;
     }
 
@@ -46,4 +46,5 @@ public class Orders {
     public void setStatus(String status) {
         this.status = status;
     }
+
 }
