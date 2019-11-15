@@ -60,4 +60,8 @@ public class CategoryRepository {
         List<Category> result = query.getResultList();
         return result;
     }
+
+    public List<Category> getCategoryByName(String name) {
+        return em.createQuery("SELECT c FROM Category c WHERE c.name LIKE :name").setParameter("name", name).getResultList();
+    }
 }

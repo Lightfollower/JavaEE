@@ -54,15 +54,7 @@ public class AdminkaBean implements Serializable {
     }
 
     public void preloadCart(ComponentSystemEvent componentSystemEvent) {
-        this.productList = productRepository.findAll();
-        this.cart = cartRepository.findAll();
-        this.cartRes = new ArrayList<>();
-        for (Cart c :
-                cart) {
-            if (c.getOrder().getId() == order.getId()) {
-                this.cartRes.add(c.getProduct());
-            }
-        }
+        this.cart = cartRepository.findByOrderId(order.getId());
     }
 
     public Category getCategory() {
@@ -135,24 +127,13 @@ public class AdminkaBean implements Serializable {
 
     public String saveProduct() throws Exception {
         if (product.getId() == null) {
-            for (Category c :
-                    categoriesList) {
-                if (c.getName().equals(category.getName())) {
-                    product.setCategory(c);
-                }
-            }
+            product.setCategory(categoryRepository.getCategoryByName(category.getName()).get(0));
             if (product.getCategory() == null)
                 throw new Exception("ololo");
             productRepository.insert(product);
         } else {
             product.setCategory(null);
-            for (Category c:
-                    categoriesList) {
-                if(c.getName().equals(category.getName())){
-                    product.setCategory(c);
-
-                }
-            }
+            product.setCategory(categoryRepository.getCategoryByName(category.getName()).get(0));
             if (product.getCategory() == null)
                 throw new Exception("ololo");
             productRepository.update(product);

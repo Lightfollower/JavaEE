@@ -41,4 +41,9 @@ public class CartRepository {
     public List<Cart> findAll() {
         return em.createQuery("from Cart ", Cart.class).getResultList();
     }
+
+    @Transactional
+    public List<Cart> findByOrderId(long id){
+        return em.createQuery("SELECT c FROM Cart c WHERE c.order.id LIKE :name").setParameter("name", id).getResultList();
+    }
 }

@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CartRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/cart.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/cart.xhtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
