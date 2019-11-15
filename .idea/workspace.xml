@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/Cart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/ToDoBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/ToDoBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/Order.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ToDo.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ToDo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ToDoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ToDoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/adminka.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/adminka.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/categories.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/categories.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/order.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/order.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/orders.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/orders.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/products.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/products.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CartRepository.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +40,7 @@
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IdeaProjects/14072019" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IdeaProjects/StudentsApp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39770114" />
@@ -197,6 +183,16 @@
       <workItem from="1573199210983" duration="23000" />
       <workItem from="1573373786449" duration="922000" />
       <workItem from="1573401292312" duration="5040000" />
+      <workItem from="1573645585964" duration="2879000" />
+      <workItem from="1573648623101" duration="321000" />
+      <workItem from="1573663989533" duration="411000" />
+      <workItem from="1573665340251" duration="9000" />
+      <workItem from="1573696112751" duration="370000" />
+      <workItem from="1573700048089" duration="1114000" />
+      <workItem from="1573732419507" duration="3511000" />
+      <workItem from="1573738462059" duration="2787000" />
+      <workItem from="1573745061115" duration="553000" />
+      <workItem from="1573800314018" duration="15084000" />
     </task>
     <servers />
   </component>
