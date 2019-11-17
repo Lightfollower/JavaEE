@@ -1,25 +1,27 @@
 package adminConsole.controller;
 
+import adminConsole.DAO.CategoryDAO;
+import adminConsole.DAO.CategoryServiceLayer;
 import adminConsole.persist.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.ejb.Stateful;
 import javax.enterprise.context.SessionScoped;
 import javax.faces.event.ComponentSystemEvent;
 import javax.inject.Inject;
 import javax.inject.Named;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-@SessionScoped
+@Stateful
 @Named
 public class AdminkaBean implements Serializable {
 
     private static final Logger logger = LoggerFactory.getLogger(AdminkaBean.class);
 
-    @Inject
-    private CategoryRepository categoryRepository;
+//    Репозиторий заменён на сервисный класс
+    private CategoryServiceLayer categoryServiceLayer;
 
     @Inject
     private ProductRepository productRepository;
@@ -30,11 +32,13 @@ public class AdminkaBean implements Serializable {
     @Inject
     private CartRepository cartRepository;
 
-    private Category category;
+//    Класс сущности заменён на класс представления
+    private CategoryDAO categoryDAO;
+
     private Product product;
     private Order order;
 
-    private List<Category> categoriesList;
+    private List<CategoryDAO> categoriesList;
     private List<Product> productList;
     private List<Order> orderList;
     private List<Cart> cart;
@@ -46,7 +50,7 @@ public class AdminkaBean implements Serializable {
     }
 
     public void preloadCategoryList(ComponentSystemEvent componentSystemEvent) {
-        this.categoriesList = categoryRepository.findAll();
+        this.categoriesList = categoryServiceLayer.findAll();
     }
 
     public void preloadProductList(ComponentSystemEvent componentSystemEvent) {
@@ -57,16 +61,16 @@ public class AdminkaBean implements Serializable {
         this.cart = cartRepository.findByOrderId(order.getId());
     }
 
-    public Category getCategory() {
-        return category;
+    public CategoryDAO getCategory() {
+        return categoryDAO;
     }
 
     public Product getProduct() {
         return product;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategory(CategoryDAO category) {
+        this.categoryDAO = category;
     }
 
     public void setProduct(Product product) {
@@ -81,7 +85,7 @@ public class AdminkaBean implements Serializable {
         this.cartRes = cartRes;
     }
 
-    public List<Category> getAllCategories() {
+    public List<CategoryDAO> getAllCategories() {
         return categoriesList;
     }
 
@@ -106,40 +110,40 @@ public class AdminkaBean implements Serializable {
     }
 
     public String createCategory() {
-        this.category = new Category();
+        this.categoryDAO = new CategoryDAO();
         return "/category.xhtml?faces-redirect=true";
     }
 
     public String createProduct() {
         this.product = new Product();
-        this.category = new Category();
+        this.categoryDAO = new CategoryDAO();
         return "/product.xhtml?faces-redirect=true";
     }
 
     public String saveCategory() {
-        if (category.getId() == null) {
-            categoryRepository.insert(category);
+        if (categoryDAO.getId() == null) {
+            categoryServiceLayer.insert(categoryDAO);
         } else {
-            categoryRepository.update(category);
+            categoryServiceLayer.update(categoryDAO);
         }
         return "/categories.xhtml?faces-redirect=true";
     }
 
-    public String saveProduct() throws Exception {
-        if (product.getId() == null) {
-            product.setCategory(categoryRepository.getCategoryByName(category.getName()).get(0));
-            if (product.getCategory() == null)
-                throw new Exception("ololo");
-            productRepository.insert(product);
-        } else {
-            product.setCategory(null);
-            product.setCategory(categoryRepository.getCategoryByName(category.getName()).get(0));
-            if (product.getCategory() == null)
-                throw new Exception("ololo");
-            productRepository.update(product);
-        }
-        return "/products.xhtml?faces-redirect=true";
-    }
+//    public String saveProduct() throws RuntimeException {
+//        if (product.getId() == null) {
+//            product.setCategory(categoryServiceLayer.getCategoryByName(categoryDAO.getName()).get(0));
+//            if (product.getCategory() == null)
+//                throw new RuntimeException("Nonexistent category");
+//            productRepository.insert(product);
+//        } else {
+//            product.setCategory(null);
+//            product.setCategory(categoryServiceLayer.getCategoryByName(categoryDAO.getName()).get(0));
+//            if (product.getCategory() == null)
+//                throw new RuntimeException("Nonexistent category");
+//            productRepository.update(product);
+//        }
+//        return "/products.xhtml?faces-redirect=true";
+//    }
 
     public String saveOrder() {
         orderRepository.update(order);
@@ -148,7 +152,7 @@ public class AdminkaBean implements Serializable {
 
     public void deleteCategory(Category category) {
         logger.info("Deleting cat.");
-        categoryRepository.delete(category.getId());
+        categoryServiceLayer.delete(category.getId());
     }
 
     public void deleteProduct(Product product) {
@@ -156,17 +160,17 @@ public class AdminkaBean implements Serializable {
         productRepository.delete(product.getId());
     }
 
-    public String editCategory(Category category) {
-        this.category = category;
+    public String editCategory(CategoryDAO category) {
+        this.categoryDAO = category;
         return "/category.xhtml?faces-redirect=true";
     }
 
-    public String editProduct(Product product) {
-        this.product = product;
-        this.category = product.getCategory();
-
-        return "/product.xhtml?faces-redirect=true";
-    }
+//    public String editProduct(Product product) {
+//        this.product = product;
+//        this.categoryDAO = product.getCategory();
+//
+//        return "/product.xhtml?faces-redirect=true";
+//    }
 
     public String editOrder(Order order) {
         this.order = order;
