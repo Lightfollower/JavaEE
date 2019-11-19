@@ -4,17 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.*;
-import javax.transaction.Transactional;
 import java.util.List;
 
-@ApplicationScoped
-@Named
+@Stateless
 public class ProductRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(ProductRepository.class);
@@ -22,22 +18,22 @@ public class ProductRepository {
     @PersistenceContext(unitName = "ds")
     private EntityManager em;
 
-    @Transactional
+    @TransactionAttribute
     @PostConstruct
     public void init() {
     }
 
-    @Transactional
+    @TransactionAttribute
     public void insert(Product product) {
         em.persist(product);
     }
 
-    @Transactional
+    @TransactionAttribute
     public void update(Product product) {
         em.merge(product);
     }
 
-    @Transactional
+    @TransactionAttribute
     public void delete(long id) {
         Product product = em.find(Product.class, id);
         if (product != null) {
@@ -45,12 +41,12 @@ public class ProductRepository {
         }
     }
 
-    @Transactional
+    @TransactionAttribute
     public Product findById(long id) {
         return em.find(Product.class, id);
     }
 
-    @Transactional
+    @TransactionAttribute
     public List<Product> findAll() {
 //        CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
 //        CriteriaQuery<Product> query = criteriaBuilder.createQuery(Product.class);

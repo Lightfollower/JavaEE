@@ -4,16 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.transaction.Transactional;
 import java.util.List;
 
-@ApplicationScoped
-@Named
+@Stateless
 public class CartRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CartRepository.class);
@@ -21,28 +18,28 @@ public class CartRepository {
     @PersistenceContext(unitName = "ds")
     private EntityManager em;
 
-    @Transactional
+    @TransactionAttribute
     @PostConstruct
     public void init() {
     }
 
 
-    @Transactional
+    @TransactionAttribute
     public void update(Cart cart) {
         em.merge(cart);
     }
 
-    @Transactional
+    @TransactionAttribute
     public Cart findById(long id) {
         return em.find(Cart.class, id);
     }
 
-    @Transactional
+    @TransactionAttribute
     public List<Cart> findAll() {
         return em.createQuery("from Cart ", Cart.class).getResultList();
     }
 
-    @Transactional
+    @TransactionAttribute
     public List<Cart> findByOrderId(long id){
         return em.createQuery("SELECT c FROM Cart c WHERE c.order.id LIKE :name").setParameter("name", id).getResultList();
     }

@@ -4,15 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.transaction.Transactional;
 import java.util.List;
 
-@ApplicationScoped
-@Named
+@Stateless
 public class OrderRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(OrderRepository.class);
@@ -20,28 +18,28 @@ public class OrderRepository {
     @PersistenceContext(unitName = "ds")
     private EntityManager em;
 
-    @Transactional
+    @TransactionAttribute
     @PostConstruct
     public void init() {
     }
 
 
-    @Transactional
+    @TransactionAttribute
     public void update(Order order) {
         em.merge(order);
     }
 
-    @Transactional
+    @TransactionAttribute
     public Order findById(long id) {
         return em.find(Order.class, id);
     }
 
-    @Transactional
+    @TransactionAttribute
     public List<Order> findAll() {
         return em.createQuery("from Order", Order.class).getResultList();
     }
 
-    @Transactional
+    @TransactionAttribute
     public List<Cart> findByOrderId(long id) {
         return em.createQuery("from Cart ", Cart.class).getResultList();
     }

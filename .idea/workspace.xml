@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CategoryServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CategoryServiceLayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CartRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/cart.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/cart.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/WEB-INF/order.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/order.xhtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,12 +53,13 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\JavaEE\webapp\src\main\webapp\WEB-INF" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\JavaEE\toDo\src\main\webapp\WEB-INF" />
       <recent name="F:\JavaEE\toDo\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\JavaEE\lesson_4\src\main\webapp" />
+      <recent name="F:\JavaEE\webapp\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -195,6 +200,13 @@
       <workItem from="1573738462059" duration="2787000" />
       <workItem from="1573745061115" duration="553000" />
       <workItem from="1573800314018" duration="15084000" />
+      <workItem from="1573889235567" duration="2135000" />
+      <workItem from="1573914600322" duration="915000" />
+      <workItem from="1573926552758" duration="1237000" />
+      <workItem from="1573970889159" duration="4605000" />
+      <workItem from="1574140397129" duration="557000" />
+      <workItem from="1574145658989" duration="9982000" />
+      <workItem from="1574165673638" duration="4407000" />
     </task>
     <servers />
   </component>
