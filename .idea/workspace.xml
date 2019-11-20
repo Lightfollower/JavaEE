@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CategoryServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CategoryServiceLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CartServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CartServiceLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CategoryDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CartRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/WEB-INF/order.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/order.xhtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -206,7 +201,8 @@
       <workItem from="1573970889159" duration="4605000" />
       <workItem from="1574140397129" duration="557000" />
       <workItem from="1574145658989" duration="9982000" />
-      <workItem from="1574165673638" duration="4407000" />
+      <workItem from="1574165673638" duration="5737000" />
+      <workItem from="1574226858018" duration="1544000" />
     </task>
     <servers />
   </component>

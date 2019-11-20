@@ -16,15 +16,14 @@ import java.util.List;
 @Stateful
 public class CartServiceLayer implements Serializable {
 
+    private static final Logger logger = LoggerFactory.getLogger(CartServiceLayer.class);
+
     List<CartDAO> representations;
     CartDAO cartDAO;
     Cart cartEntity;
 
     @EJB
-    CartRepository cartRepository;
-
-    private static final Logger logger = LoggerFactory.getLogger(CartServiceLayer.class);
-
+    private CartRepository cartRepository;
 
     public void update(CartDAO cart) {
         cartRepository.update(createEntityFromDAO(cart));

@@ -1,8 +1,5 @@
 package adminConsole.DAO;
 
-import javax.ejb.Stateful;
-
-@Stateful
 public class CategoryDAO {
 
     private Long id;

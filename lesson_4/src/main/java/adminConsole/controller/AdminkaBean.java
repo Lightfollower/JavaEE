@@ -92,13 +92,7 @@ public class AdminkaBean implements Serializable {
     public List<CategoryDAO> getAllCategories() {
         for (CategoryDAO c :
                 categoriesList) {
-            System.out.println("ololo");
-            System.out.println("ololo");
-            System.out.println("ololo");
             System.out.println(c.getName());
-            System.out.println("ololo");
-            System.out.println("ololo");
-            System.out.println("ololo");
         }
         return categoriesList;
     }
