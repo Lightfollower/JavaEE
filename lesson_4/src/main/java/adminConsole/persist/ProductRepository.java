@@ -47,6 +47,16 @@ public class ProductRepository {
     }
 
     @TransactionAttribute
+    public List<Product> findByName(String name) {
+        return em.createQuery("SELECT c FROM Product c WHERE c.name LIKE :name").setParameter("name", name).getResultList();
+    }
+
+    @TransactionAttribute
+    public List<Product> findByCatId(long id) {
+        return em.createQuery("SELECT c FROM Product c WHERE c.category.id LIKE :id").setParameter("id", id).getResultList();
+    }
+
+    @TransactionAttribute
     public List<Product> findAll() {
 //        CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
 //        CriteriaQuery<Product> query = criteriaBuilder.createQuery(Product.class);

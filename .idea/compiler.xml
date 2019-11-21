@@ -7,16 +7,15 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="lesson_4" />
-        <module name="users-impl" />
         <module name="ws-client" />
         <module name="wsclient" />
-        <module name="users-api" />
         <module name="webapp" />
         <module name="toDo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="9">
-      <module name="ws-client" target="1.9" />
+      <module name="users-api" target="1.9" />
+      <module name="users-impl" target="1.9" />
       <module name="wsclient" target="1.8" />
     </bytecodeTargetLevel>
   </component>

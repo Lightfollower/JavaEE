@@ -35,6 +35,22 @@ public class ProductServiceLayer implements Serializable {
         return representations;
     }
 
+    public ProductDAO findProductById(long id){
+        return createDAOFromEntity(productRepository.findById(id));
+    }
+
+    public ProductDAO findProductByName(String name){
+        return createDAOFromEntity(productRepository.findByName(name).get(0));
+    }
+    public List<ProductDAO> findProductByCatId(long id){
+        representations = new ArrayList<>();
+        for (Product p :
+                productRepository.findByCatId(id)) {
+            representations.add(createDAOFromEntity(p));
+        }
+        return representations;
+    }
+
     public void insert(ProductDAO product) {
         productRepository.insert(createEntityFromDAO(product));
     }

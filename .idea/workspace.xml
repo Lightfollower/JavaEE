@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/ProductServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/ProductServiceLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-impl/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/ru/javaEE/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/ru/javaEE/model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-impl/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-impl/src/main/java/ru/geekbrains/RestApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-impl/src/main/java/ru/geekbrains/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-impl/src/main/java/ru/geekbrains/UserServiceRest.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +25,8 @@
       <list>
         <option value="Jsp File" />
         <option value="XHTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -42,7 +49,7 @@
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wsclient/target/generated-sources/wsimport" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/rest_service" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39770114" />
@@ -53,6 +60,7 @@
       <recent name="ru.geekbrains.service.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JavaEE\lesson_4\src\main\java\adminConsole\rest_service" />
       <recent name="F:\JavaEE\wsclient\target\generated-sources\wsimport" />
       <recent name="F:\JavaEE\toDo\src\main\webapp\WEB-INF" />
       <recent name="F:\JavaEE\toDo\src\main\webapp" />
@@ -74,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.users-impl [clean,install,wildfly:deploy]">
+  <component name="RunManager" selected="Maven.Lesson_4">
     <configuration name="WsClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="javaEE.WsClient" />
       <module name="wsclient" />
