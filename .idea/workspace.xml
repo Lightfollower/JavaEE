@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CartServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CartServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/CategoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/controller/AdminkaBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-impl/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-impl/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +18,7 @@
       <list>
         <option value="Jsp File" />
         <option value="XHTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -41,14 +42,18 @@
     <property name="DefaultHtmlFileTemplate" value="XHTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IdeaProjects/StudentsApp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/wsclient/target/generated-sources/wsimport" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.39770114" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.geekbrains.service.model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\JavaEE\wsclient\target\generated-sources\wsimport" />
       <recent name="F:\JavaEE\toDo\src\main\webapp\WEB-INF" />
       <recent name="F:\JavaEE\toDo\src\main\webapp" />
     </key>
@@ -69,7 +74,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.Lesson_4">
+  <component name="RunManager" selected="Maven.users-impl [clean,install,wildfly:deploy]">
+    <configuration name="WsClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaEE.WsClient" />
+      <module name="wsclient" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaEE.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Lesson_4" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -97,6 +115,31 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <configuration name="javaEE [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="toDo [clean,install,wildfly:deploy]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -119,6 +162,59 @@
             </option>
             <option name="resolveToWorkspace" value="false" />
             <option name="workingDirPath" value="$PROJECT_DIR$/toDo" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="users-api [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/users-api" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="users-impl [clean,install,wildfly:deploy]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+                <option value="wildfly:deploy" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/users-impl" />
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
@@ -152,10 +248,19 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.WsClient" />
       <item itemvalue="Maven.webapp [clean,install,wildfly:deploy]" />
       <item itemvalue="Maven.toDo [clean,install,wildfly:deploy]" />
       <item itemvalue="Maven.Lesson_4" />
+      <item itemvalue="Maven.users-impl [clean,install,wildfly:deploy]" />
+      <item itemvalue="Maven.javaEE [install]" />
+      <item itemvalue="Maven.users-api [clean,install]" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.WsClient" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -203,6 +308,9 @@
       <workItem from="1574145658989" duration="9982000" />
       <workItem from="1574165673638" duration="5737000" />
       <workItem from="1574226858018" duration="1544000" />
+      <workItem from="1574249199502" duration="2548000" />
+      <workItem from="1574269837143" duration="2834000" />
+      <workItem from="1574313737549" duration="17069000" />
     </task>
     <servers />
   </component>

@@ -6,17 +6,30 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="lesson_4" />
+        <module name="users-impl" />
+        <module name="ws-client" />
+        <module name="wsclient" />
+        <module name="users-api" />
         <module name="webapp" />
         <module name="toDo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="9" />
+    <bytecodeTargetLevel target="9">
+      <module name="ws-client" target="1.9" />
+      <module name="wsclient" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_STRING" value="--add-modules java.xml.ws.annotation" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="lesson_4" options="" />
       <module name="toDo" options="" />
+      <module name="users-api" options="" />
+      <module name="users-impl" options="" />
       <module name="webapp" options="" />
+      <module name="ws-client" options="" />
+      <module name="wsclient" options="" />
     </option>
   </component>
 </project>
