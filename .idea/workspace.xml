@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a555fd14-0f1c-4340-b52c-7020ab2fbc0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/ProductServiceLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/DAO/ProductServiceLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/ru/javaEE/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/ru/javaEE/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-impl/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-impl/src/main/java/ru/geekbrains/RestApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-impl/src/main/java/ru/geekbrains/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-impl/src/main/java/ru/geekbrains/UserServiceRest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/persist/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/rest_service/AdminkaServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/java/adminConsole/rest_service/AdminkaServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson_4/src/main/webapp/todo.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/lesson_4/src/main/webapp/todo.xhtml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,9 +18,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
-        <option value="XHTML File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
+        <option value="XHTML File" />
       </list>
     </option>
   </component>
@@ -56,6 +50,11 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\JavaEE\lesson_4\src\main\webapp\admin" />
+      <recent name="F:\JavaEE\lesson_4\src\main\webapp" />
+      <recent name="F:\JavaEE\webapp\src\main\webapp\WEB-INF" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ru.geekbrains.service.model" />
     </key>
@@ -64,10 +63,6 @@
       <recent name="F:\JavaEE\wsclient\target\generated-sources\wsimport" />
       <recent name="F:\JavaEE\toDo\src\main\webapp\WEB-INF" />
       <recent name="F:\JavaEE\toDo\src\main\webapp" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\JavaEE\lesson_4\src\main\webapp" />
-      <recent name="F:\JavaEE\webapp\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -319,6 +314,7 @@
       <workItem from="1574249199502" duration="2548000" />
       <workItem from="1574269837143" duration="2834000" />
       <workItem from="1574313737549" duration="17069000" />
+      <workItem from="1574415153122" duration="280000" />
     </task>
     <servers />
   </component>

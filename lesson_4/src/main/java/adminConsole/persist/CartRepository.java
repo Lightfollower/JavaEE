@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.persistence.EntityManager;
@@ -11,6 +13,7 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Stateless
+@PermitAll
 public class CartRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CartRepository.class);

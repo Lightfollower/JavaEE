@@ -32,6 +32,14 @@
                 </li>
             </ul>
         </div>
+        <h:form class="form-inline my-2 my-lg-0">
+            <h:outputText rendered="#{not empty request.remoteUser}"
+                          value="Current user: #{request.remoteUser}"/>
+
+            <h:commandLink rendered="#{not empty request.remoteUser}"
+                           action="#{usersBean.logout}"
+                           class="btn btn-outline-success my-2 my-sm-0">Logout</h:commandLink>
+        </h:form>
     </nav>
 
     <div class="container">
@@ -44,11 +52,11 @@
 
                 </div>
                 <div class="col-12">
-                    <h:commandButton value="Categories" styleClass="btn btn-primary"
+                    <h:commandButton rendered="#{request.remoteUser.contentEquals('admin')}" value="Categories" styleClass="btn btn-primary"
                                      action="#{adminkaBean.goToCategories}"/>
                 </div>
                 <div class="col-12">
-                    <h:commandButton value="Orders" styleClass="btn btn-primary"
+                    <h:commandButton rendered="#{request.remoteUser.contentEquals('admin')}" value="Orders" styleClass="btn btn-primary"
                                      action="#{adminkaBean.goToOrders}"/>
                 </div>
 

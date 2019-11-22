@@ -7,11 +7,13 @@ import adminConsole.DAO.ProductServiceLayer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.annotation.security.PermitAll;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import java.util.List;
 
 @Stateless
+@PermitAll
 public class AdminkaServiceImpl implements AdminkaServiceRest {
     private static final Logger logger = LoggerFactory.getLogger(AdminkaServiceImpl.class);
 

@@ -5,6 +5,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.interceptor.Interceptors;
@@ -14,6 +16,7 @@ import javax.persistence.Query;
 import java.util.List;
 
 @Stateless
+@RolesAllowed("admin")
 public class CategoryRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(CategoryRepository.class);
@@ -27,16 +30,19 @@ public class CategoryRepository {
     }
 
     @TransactionAttribute
+    @RolesAllowed("admin")
     public void insert(Category category) {
         em.persist(category);
     }
 
     @TransactionAttribute
+    @RolesAllowed("admin")
     public void update(Category category) {
         em.merge(category);
     }
 
     @TransactionAttribute
+    @RolesAllowed("admin")
     public void delete(long id) {
         Category category = em.find(Category.class, id);
         if (category != null) {

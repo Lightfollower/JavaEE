@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="lesson_4" />
         <module name="ws-client" />
-        <module name="wsclient" />
         <module name="webapp" />
         <module name="toDo" />
+        <module name="wsclient" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="9">

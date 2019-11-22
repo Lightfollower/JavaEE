@@ -4,6 +4,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.security.PermitAll;
+import javax.annotation.security.RolesAllowed;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionAttribute;
 import javax.persistence.EntityManager;
@@ -11,6 +13,8 @@ import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Stateless
+@PermitAll
+//@TransactionManagement(javax.ejb.TransactionManagementType.BEAN)
 public class ProductRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(ProductRepository.class);
@@ -24,16 +28,19 @@ public class ProductRepository {
     }
 
     @TransactionAttribute
+    @RolesAllowed("admin")
     public void insert(Product product) {
         em.persist(product);
     }
 
     @TransactionAttribute
+    @RolesAllowed("admin")
     public void update(Product product) {
         em.merge(product);
     }
 
     @TransactionAttribute
+    @RolesAllowed("admin")
     public void delete(long id) {
         Product product = em.find(Product.class, id);
         if (product != null) {

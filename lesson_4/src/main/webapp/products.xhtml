@@ -35,6 +35,14 @@
                 </li>
             </ul>
         </div>
+        <h:form class="form-inline my-2 my-lg-0">
+            <h:outputText rendered="#{not empty request.remoteUser}"
+                          value="Current user: #{request.remoteUser}"/>
+
+            <h:commandLink rendered="#{not empty request.remoteUser}"
+                           action="#{usersBean.logout}"
+                           class="btn btn-outline-success my-2 my-sm-0">Logout</h:commandLink>
+        </h:form>
     </nav>
 
     <div class="container">
@@ -44,7 +52,7 @@
                 <div class="col-12">
                     <h:commandButton value="root" styleClass="btn btn-primary"
                                      action="#{adminkaBean.goToRoot}"/>
-                    <h:commandButton value="Add Product" styleClass="btn btn-primary"
+                    <h:commandButton rendered="#{request.remoteUser.contentEquals('admin')}" value="Add Product" styleClass="btn btn-primary"
                                      action="#{adminkaBean.createProduct}"/>
                 </div>
 
@@ -69,9 +77,9 @@
 
                         <h:column>
                             <f:facet name="header">Actions</f:facet>
-                            <h:commandButton value="Edit" styleClass="btn btn-success"
+                            <h:commandButton rendered="#{request.remoteUser.contentEquals('admin')}" value="Edit" styleClass="btn btn-success"
                                              action="#{adminkaBean.editProduct(prod)}"/>
-                            <h:commandButton value="Delete" styleClass="btn btn-danger"
+                            <h:commandButton rendered="#{request.remoteUser.contentEquals('admin')}" value="Delete" styleClass="btn btn-danger"
                                              action="#{adminkaBean.deleteProduct(prod)}">
                                 <f:ajax event="click" render="prodForm"/>
                             </h:commandButton>
